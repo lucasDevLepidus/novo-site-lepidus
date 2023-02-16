@@ -5,7 +5,7 @@ title: Lepidus Tecnologia
 
 params:
   images:
-    logoLepidus: /images/lepidus.png
+    logoLepidus: /images/Banner_Lepidus_Tecnologia.svg
     logoPeriodicos: /images/Periodicos-em-Nuvens.png
     logoEventos: /images/Eventos-em-Nuvens.png
     logoGrupos: /images/Grupos-em-Nuvens.png
@@ -15,7 +15,7 @@ menu:
   - name: Inicio
     url: /
     weight: 1
-  - name: Sobre a Lepidus
+  - name: Quem somos
     url: /quem-somos/
     weight: 2
   - name: Periódicos em Nuvens
