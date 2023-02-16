@@ -24,22 +24,43 @@
 
 <p class="margin-reset">Se preferir, preencha o formulário abaixo. Retornaremos no endereço de correio eletrônico informado.</p>
 
-<form class="px-6">
+<form action="https://formsubmit.co/contato@lepidus.com.br" method="POST" class="px-6">
   <div class="form-group flex flex-col my-5">
     <label for="nome" class="text-sm">Nome completo</label>
-    <input type="text" class="form-control w-5/12 border-2 border-gray-300 shadow-gray-300 h-8" id="nome">
+    <input type="text" name="nome" class="form-control w-5/12 border-2 border-gray-300 shadow-gray-300 h-8" id="nome" required>
   </div>
   <div class="form-group flex flex-col my-5">
     <label for="email" class="text-sm">Endereço de e-mail</label>
-    <input type="email" class="form-control w-5/12 border-2 border-gray-300 h-8" id="email">
+    <input type="email" name="email" class="form-control w-5/12 border-2 border-gray-300 h-8" id="email" required>
   </div>
   <div class="form-group flex flex-col my-5">
     <label for="telefone" class="text-sm">Telefone</label>
-    <input type="text" class="form-control w-5/12 border-2 border-gray-300 h-8" id="telefone">
+    <input type="text" name="telefone" class="form-control w-5/12 border-2 border-gray-300 h-8" id="telefone" required>
   </div>
   <div class="form-group flex flex-col my-5">
     <label for="mensagem" class="text-sm">Mensagem</label>
-    <textarea class="form-control w-5/12 border-2 border-gray-300 outline-blue-300" id="mensagem" cols="40" rows="8"></textarea>
+    <textarea name="mensagem" class="form-control w-5/12 border-2 border-gray-300 outline-blue-300" id="mensagem" cols="40" rows="8" required></textarea>
   </div>
+
+  <input
+    type="hidden"
+    name="_subject"
+    value="Contato site Lepidus | Formulário preenchido pelo site"
+  />
+
+  <input
+    type="hidden"
+    name="_next"
+    value="{{$.Site.BaseURL}}/agradecimento/"
+  />
+
+  <input
+    type="hidden"
+    name="_url"
+    value="https://lepidus.com.br/contato/"
+  />
+
+  <input type="hidden" name="_template" value="table" />
+
   <button type="submit" class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">Enviar</button>
 </form>
